@@ -9,6 +9,10 @@ const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Twitter Clone API is running");
+});
+
 dbPath = path.join(__dirname, 'twitterClone.db');
 let db = null;
 
