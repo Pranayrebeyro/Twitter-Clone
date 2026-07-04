@@ -5,6 +5,9 @@
     "main": "app.js",
     "author": "",
     "license": "ISC",
+    "engines": {
+        "node": "20.x"
+    },
     "dependencies": {
         "bcrypt": "5.0.1",
         "express": "^4.22.2",
