@@ -236,6 +236,10 @@ app.get('/tweets/:tweetId/likes/', authenticateToken,isUserFollowing, async (req
         response.send({likes: usernamesArray});
 });
 
+app.get("/test", (req, res) => {
+  res.send("TEST OK");
+});
+
 //API 8
 app.get('/tweets/:tweetId/replies/', authenticateToken, isUserFollowing,  async (request, response) => {
     const {tweetId} = request.params;
