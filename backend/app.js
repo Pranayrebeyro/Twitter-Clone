@@ -4,9 +4,12 @@ const sqlite3 = require('sqlite3');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const cors = require("cors");
 
 
 const app = express();
+app.use(cors());
+app.options("*", cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
